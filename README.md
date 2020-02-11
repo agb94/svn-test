@@ -5,9 +5,12 @@
 ```console
 foo@bar:~$ svn co --depth empty https://github.com/user/repo
 Checked out revision 1.
-foo@bar:~$ cd svn-test/
+foo@bar:~$ cd repo/
 ``` 
-약, private 레포라면 여기서 Auth 에러(Authentication realm: <https://github.com:443> GitHub)가 날 것이다.
+
+repo에 가보면 지금은 빈 디렉토리
+
+만약, private 레포라면 여기서 Auth 에러(Authentication realm: <https://github.com:443> GitHub)가 날 것이다.
 그럴 땐 다음과 같이 이메일과 비밀번호를 주면 됨
 ```console
 foo@bar:~$ svn co --depth empty https://github.com/user/repo --username=[깃헙이메일] --password=[깃헙비밀번호]
@@ -31,7 +34,7 @@ Updated to revision 1.
 > The Subversion bridge maps trunk to the Git HEAD branch (which is usually master).
 
 라고 되어있다. 
-이제 저걸 trunk로 가지고 작업을 하면 된다.
+이제 저걸 trunk로 가지고 svn으로 코드 관리를 하면 된다.
 
 4. 커밋 예시
 
